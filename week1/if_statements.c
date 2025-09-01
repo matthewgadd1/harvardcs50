@@ -12,7 +12,7 @@ int main(void)
     else if (x > y) {
         printf("X is not less than Y\n");
     }
-    else {
+    else if (x == y) {
         printf("X is the same as Y\n");
     }
 }
