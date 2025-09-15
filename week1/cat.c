@@ -1,12 +1,23 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int get_positive_int(void);
 void meow(int n);
 
 int main(void)
 {
-    int n = get_int("Number: ");
-    meow(n);
+    int times = get_positive_int();
+    meow(times);
+}
+
+int get_positive_int(void)
+{
+    int n;
+    do
+    {
+        n = get_int("Number: ");
+    } while (n < 1);
+    return n;
 }
 
 void meow(int n)
